@@ -1,0 +1,19 @@
+{
+  "name": "frnt-end",
+  "version": "1.0.0",
+  "description": "job interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpotocn/frnt-end.git"
+  },
+  "author": "JanP",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpotocn/frnt-end/issues"
+  },
+  "homepage": "https://github.com/jpotocn/frnt-end#readme"
+}
