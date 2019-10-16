@@ -2,79 +2,82 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Form</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="dist/css/style.css">
-    </head>
-    <body>
-        <!--FORM HEADING.......-->
-            <div class="form-heading">
-                 <div class="form-font">
-                    SCHREIBEN SIE<br>
-                    UNS EINE<br>
-                    NACHRICHT
-                </div>
-                <div class="form-line">
-                        ________
-                    </div>
-            </div>
-            
-            
-        <div class="main">
-                    
-             <!--TEXT BOX......-->
-            <div class="form-box">
-                <div class="form-text-sm">
-                Ich interessiere mich für ...
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-                    <div class="textBox">
-                        <textarea rows="15" cols="55">
-                           
-                        </textarea>
-                    </div> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--FORM HEADING.......-->
+    <div class="form-heading">
+        <div class="form-font">
+            SCHREIBEN SIE<br>
+            UNS EINE<br>
+            NACHRICHT
+        </div>
+        <div class="form-line"></div>
+    </div>
+
+
+    <div class="main">
+        <!--TEXT BOX......-->
+        <div class="form-wrapper">
+            <div class="form">
+                <div class="form-text-sm">
+                    <p>Ich interessiere mich für ...</p>
                 </div>
+                <textarea rows="17" cols="55" id="text-area"></textarea>
             </div>
-            
-            <!--FORM.............-->
-            <div class="formRight">
+
+            <div class="line-overlay">
+                    <div class="line"></div>
+                </div>
+
+
+            <div class="form">
                 <div class="sex">
                     <form>
                         <p>Anrede:</p>
-                        <input type="radio" name="gender" value="male"> Frau
+                        <p><input type="radio" name="gender" value="male"> Frau
                         <input type="radio" name="gender" value="female"> Herr
-                        <input type="radio" name="gender" value="other"> Keine Angabe  
+                        <input type="radio" name="gender" value="other"> Keine Angabe</p>
                     </form>
                 </div>
-                <div class="nameBox">
-                    <div class="name">
-                        Ihr Name:
+                <div class=" form-name-box">
+                    <div class="form-name">
+                        <p>Ihr Name:</p>
                     </div>
                     <div class="textBox">
-                            <input type="text" name="form-name" size="35"><br>
+                        <input type="text" name="form-name" class="form-input"><br>
                     </div>
                 </div>
-                <div class="emailAddress">
-                    <div class="email">
-                            Ihr E-Mail-Adresse
+                <div class="form-email-box">
+                    <div class="form-email">
+                        <p>Ihr E-Mail-Adresse:</p>
                     </div>
                     <div class="textBox">
-                            <input type="text" name="form-email" size="35"><br>
+                        <input type="text" name="form-email" class="form-input"><br>
                     </div>
+                </div>
+                <div class="button-overlay">
+                    <button onsubmit="send()" class="form-button">SEND</button>
                 </div>
             </div>
 
-            <div class="footer">
-                <div class="buttonOverlay">
-                    <button>SEND   ></button>
-                </div>
-            </div>
+        </div>
 
-        </div>       
-        <script src="script.js" async defer></script>
-    </body>
+
+    </div>
+    <script src="script.js" async defer></script>
+</body>
+
 </html>

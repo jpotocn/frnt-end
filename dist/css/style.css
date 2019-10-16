@@ -3,28 +3,83 @@ body {
 }
 
 .form-heading {
-  padding-top: 5vh;
+  padding-top: 7vh;
   padding-left: 15vh;
 }
 
 .form-heading .form-font {
   font-size: 55px;
-  letter-spacing: 1px;
-  color: #C71585;
-  font-family: "Advent Pro", sans-serif;
+  letter-spacing: 7px;
+  color: #ac066fde;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .form-heading .form-line {
-  color: #C71585;
+  background: #ac066fde;
+  width: 80px;
+  height: 1px;
+  margin: 10px 0 5px 0;
 }
 
-.form-text-sm {
-  color: #a6a6a6;
-  font-family: "Advent Pro", sans-serif;
+p {
+  color: #737373;
+  font-family: "Noto Sans", sans-serif;
   font-weight: bold;
+}
+
+textarea {
+  border: none;
+}
+
+.form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-wrapper .form {
+  margin-right: 3%;
+}
+
+.line-overlay {
+  padding-right: 80px;
+  padding-left: 25px;
+}
+
+.line-overlay .line {
+  background: #cfc9cf;
+  height: 33vh;
+  width: 2px;
+}
+
+.form-radio {
+  height: 12px;
+}
+
+.form-input {
+  width: 220%;
+  height: 70px;
+  border: none;
 }
 
 .main {
   padding: 15vh;
   margin: 20px;
+}
+
+.button-overlay {
+  padding-top: 35%;
+  padding-left: 153%;
+}
+
+.button-overlay .form-button {
+  background-color: #ac066fde;
+  width: 155px;
+  height: 55px;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 3px;
+  border: none;
+  -webkit-box-shadow: 3px 3px 3px #737373;
+          box-shadow: 3px 3px 3px #737373;
 }
