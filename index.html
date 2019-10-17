@@ -12,7 +12,7 @@
     <title>Form</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="dist/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 
@@ -29,53 +29,57 @@
 
 
     <div class="main">
-        <!--TEXT BOX......-->
-        <div class="form-wrapper">
-            <div class="form">
-                <div class="form-text-sm">
-                    <p>Ich interessiere mich für ...</p>
+        <form>
+            <!--TEXT BOX......-->
+            <div class="form-wrapper">
+                <div class="form">
+                    <div class="form-text-sm">
+                        <p>Ich interessiere mich für ...</p>
+                    </div>
+                    <div class="form-text-box">
+                        <textarea rows="17" cols="55" id="text-area"></textarea>
+                    </div>
+                    <div id="required"></div>
                 </div>
-                <textarea rows="17" cols="55" id="text-area"></textarea>
-            </div>
 
-            <div class="line-overlay">
+                <div class="line-overlay">
                     <div class="line"></div>
                 </div>
 
 
-            <div class="form">
-                <div class="sex">
-                    <form>
+                <div class="form">
+                    <div class="sex">
                         <p>Anrede:</p>
-                        <p><input type="radio" name="gender" value="male"> Frau
-                        <input type="radio" name="gender" value="female"> Herr
-                        <input type="radio" name="gender" value="other"> Keine Angabe</p>
-                    </form>
-                </div>
-                <div class=" form-name-box">
-                    <div class="form-name">
-                        <p>Ihr Name:</p>
+                        <p id="form-sex"><input type="radio" name="gender" value="male" class="radio"> Frau
+                            <input type="radio" name="gender" value="female" class="radio"> Herr
+                            <input type="radio" name="gender" value="other" class="radio"> Keine Angabe</p>
                     </div>
-                    <div class="textBox">
-                        <input type="text" name="form-name" class="form-input"><br>
+                    <div class=" form-name-box">
+                        <div class="form-name">
+                            <p>Ihr Name:</p>
+                        </div>
+                        <div class="textBox">
+                            <input type="text" name="form-name" id="form-input-name"><br>
+                            <div id="required"></div>
+                        </div>
+                    </div>
+                    <div class="form-email-box">
+                        <div class="form-email">
+                            <p>Ihr E-Mail-Adresse:</p>
+                        </div>
+                        <div class="textBox">
+                            <input type="text" name="form-email" id="form-input-email"><br>
+                            <div id="required"></div>
+                        </div>
+                    </div>
+                    <div class="button-overlay">
+                        <input type="button" onclick="send()" class="form-button" value="SEND">
                     </div>
                 </div>
-                <div class="form-email-box">
-                    <div class="form-email">
-                        <p>Ihr E-Mail-Adresse:</p>
-                    </div>
-                    <div class="textBox">
-                        <input type="text" name="form-email" class="form-input"><br>
-                    </div>
-                </div>
-                <div class="button-overlay">
-                    <button onsubmit="send()" class="form-button">SEND</button>
-                </div>
+
             </div>
 
-        </div>
-
-
+        </form>
     </div>
     <script src="script.js" async defer></script>
 </body>

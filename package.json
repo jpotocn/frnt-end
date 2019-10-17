@@ -4,7 +4,7 @@
   "description": "job interview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy":"gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/jpotocn/frnt-end/issues"
   },
-  "homepage": "https://github.com/jpotocn/frnt-end#readme"
+  "homepage": "https://github.com/jpotocn/frnt-end/"
 }

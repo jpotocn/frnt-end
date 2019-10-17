@@ -1,16 +1,25 @@
-var name = document.getElementById('name').value;
-var email = document.getElementById('email').value;
-var textArea = document.getElementById('text-area').value;
-var button = document.getElementById('button').value;
+function send() {
+    var email = document.getElementById('form-input-email')
+    var name = document.getElementById('form-input-name');
+    var textBox = document.getElementById('text-area');
+    var form = document.getElementById('form');
+    var required = document.getElementById('required');
 
 
+    /*   if(email&&name&&textbox == true){
+           console.log("First Name:" + " " + name.value + "\n" +"Email:" + " " + email.value + "\n" + "Message" + " " + textBox.value);
+       }else{
+       alert("FILL OUT THE FORM")
+   
+       } */
+        if (name.value == "") {
+            required.textContent = "* Required Field";
+            return false;
+        }
 
-function send(){
-    if(name&&email&&textArea == ""){
-        alert("EMPTY TEXT AREA");
-        return false;
-    }else{
-        alert("CONTINUE")
-    }
-    
+        if (email.value == "") {
+            required.textContent = "* Required Field";
+            return false;
+        }
+
 }
