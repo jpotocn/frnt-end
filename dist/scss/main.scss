@@ -37,16 +37,17 @@ $font-stack: "Noto Sans", sans-serif;
   margin-left: auto;
   overflow: hidden;
   height: 100%;
-  position: relative;
-
+ 
   .form-wrapper {
     margin-right: auto;
     margin-left: auto;
     
+
    .form-inside{
     display: flex;
     justify-content: center;
     padding-top: 5%;
+    
     .form {
       margin-right: 3%;
       
@@ -60,23 +61,18 @@ $font-stack: "Noto Sans", sans-serif;
           display: inline-block;
           width: 150px;
 
-        input{
+        .radio{
           cursor: pointer;
           height: 25px;
           width: 25px;
+          border-radius: 50%;
         }
-
-        input:after{
-          background-color: $primary-color;
-        }
-
-        
 
         label{
           color:$secondary-color;
           font-family: $font-stack;
           font-size: 16px;
-          font-weight: bold;
+          font-weight: bold;     
           
         }
         }
@@ -87,7 +83,6 @@ $font-stack: "Noto Sans", sans-serif;
         width:50%;
 
         .form-email {
-          display: block;
           margin-bottom: 5px;
         }
       }
@@ -102,9 +97,7 @@ $font-stack: "Noto Sans", sans-serif;
         height: 90%;
       }
     }
-   } 
-    
-    
+   }  
   }
 }
 
