@@ -1,25 +1,45 @@
-function send() {
-    var email = document.getElementById('form-input-email')
-    var name = document.getElementById('form-input-name');
-    var textBox = document.getElementById('text-area');
-    var form = document.getElementById('form');
-    var required = document.getElementById('required');
+const name = document.getElementById('form-input-name');
+const email = document.getElementById('form-input-email');
+const textBox = document.getElementById('form-text-area');
+const form = document.getElementById('contact-form');
+const errorElement = document.getElementById('text-required');
+ 
+// Defining a function to display error message
 
-
-    /*   if(email&&name&&textbox == true){
-           console.log("First Name:" + " " + name.value + "\n" +"Email:" + " " + email.value + "\n" + "Message" + " " + textBox.value);
-       }else{
-       alert("FILL OUT THE FORM")
-   
-       } */
-        if (name.value == "") {
-            required.textContent = "* Required Field";
-            return false;
-        }
-
-        if (email.value == "") {
-            required.textContent = "* Required Field";
-            return false;
-        }
-
+function errorMessage(elementId , message){
+    document.getElementById(elementId).innerHTML = message;
 }
+
+form.addEventListener('submit', (e) => {
+    
+    //name validation
+    if(name.value === ''){
+        errorMessage("name-required","Required field")
+        errorMessage("star-name-required","*")
+        e.preventDefault()
+    }else{
+        console.log("Name:" + name.value);
+    }
+
+    //email validation
+    if(email.value === ''){
+        errorMessage("email-required","Required field")
+        errorMessage("star-email-required","*")      
+        e.preventDefault()
+    }else{
+        console.log("Email:" + email.value);
+    }
+
+    //textbox validation
+    if(textBox.value === ''){
+        errorMessage("text-required","Required field")
+        errorMessage("star-text-required","*")
+        e.preventDefault()
+    }
+    else{
+        console.log("Message:" + textBox.value);
+    }
+})
+
+
+

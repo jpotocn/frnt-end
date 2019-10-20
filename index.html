@@ -14,74 +14,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <!--FORM HEADING.......-->
     <div class="form-heading">
         <div class="form-font">
-            SCHREIBEN SIE<br>
-            UNS EINE<br>
-            NACHRICHT
+            schreiben sie<br>
+            uns eine<br>
+            nachricht
         </div>
-        <div class="form-line"></div>
+        <div class="form-line-overlay">
+            <div class="form-line"></div>
+        </div>
     </div>
-
-
-    <div class="main">
-        <form>
+    <div class="container">
+        <form action="/" id="contact-form" method="GET">
             <!--TEXT BOX......-->
             <div class="form-wrapper">
-                <div class="form">
-                    <div class="form-text-sm">
-                        <p>Ich interessiere mich für ...</p>
+                <div class="form-inside">
+                    <div class="form">
+                        <div class="form-text-sm">
+                            <p>Ich interessiere mich für ...</p>
+                        </div>
+                        <div class="form-text-box">
+                            <textarea rows="12" cols="55" id="form-text-area"></textarea>
+                        </div>
+    
+                        <div class="star-required" id="star-text-required"></div>
+    
+                        <div class="required" id="text-required"></div>
                     </div>
-                    <div class="form-text-box">
-                        <textarea rows="17" cols="55" id="text-area"></textarea>
+                    <div class="line-overlay">
+                            <div class="line"></div>
+                        </div>
+    
+                    <div class="form">
+                        <div class="form-sex">
+                            <div class="form-sex-label">
+                                <p>Anrede:<p>
+                            </div>
+                            <div class="form-sex-radio">
+                                <div class="row">
+                                    <input type="radio" name="gender" value="female" class="radio">
+                                    <label for="female">Frau</label>
+                                </div>
+                                <div class="row">
+                                    <input type="radio" name="gender" value="male" class="radio">
+                                    <label for="male">Herr</label>
+                                </div>
+                                <div class="row">
+                                    <input type="radio" name="gender" value="other" class="radio">
+                                    <label for="other">Keine Angabe</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" form-name-box">
+                            <div class="form-name">
+                                <p>Ihr Name:</p>
+                            </div>
+                            <div class="textBox">
+                                <input type="text" name="form-name" id="form-input-name"><br>
+                                <div class="star-required" id="star-name-required"></div>
+                                <div class="required" id="name-required"></div>
+                            </div>
+                        </div>
+                        <div class="form-email-box">
+                            <div class="form-email">
+                                <p>Ihr E-Mail-Adresse:</p>
+                            </div>
+                            <div class="textBox">
+                                <input type="text" name="form-email" id="form-input-email"><br>
+                                <div class="star-required" id="star-email-required"></div>
+                                <div class="required" id="email-required"></div>
+                            </div>
+                            <div class="button-overlay">
+                                <input type="submit" class="form-button" value="send">
+                            </div>
+                        </div>
                     </div>
-                    <div id="required"></div>
                 </div>
-
-                <div class="line-overlay">
-                    <div class="line"></div>
-                </div>
-
-
-                <div class="form">
-                    <div class="sex">
-                        <p>Anrede:</p>
-                        <p id="form-sex"><input type="radio" name="gender" value="male" class="radio"> Frau
-                            <input type="radio" name="gender" value="female" class="radio"> Herr
-                            <input type="radio" name="gender" value="other" class="radio"> Keine Angabe</p>
-                    </div>
-                    <div class=" form-name-box">
-                        <div class="form-name">
-                            <p>Ihr Name:</p>
-                        </div>
-                        <div class="textBox">
-                            <input type="text" name="form-name" id="form-input-name"><br>
-                            <div id="required"></div>
-                        </div>
-                    </div>
-                    <div class="form-email-box">
-                        <div class="form-email">
-                            <p>Ihr E-Mail-Adresse:</p>
-                        </div>
-                        <div class="textBox">
-                            <input type="text" name="form-email" id="form-input-email"><br>
-                            <div id="required"></div>
-                        </div>
-                    </div>
-                    <div class="button-overlay">
-                        <input type="button" onclick="send()" class="form-button" value="SEND">
-                    </div>
-                </div>
-
             </div>
-
         </form>
     </div>
-    <script src="script.js" async defer></script>
 </body>
 
 </html>
