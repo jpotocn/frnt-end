@@ -1,24 +1,8 @@
 body {
   background-color: #f2f2f2;
-}
-
-.form-heading {
-  padding-top: 7vh;
-  padding-left: 15vh;
-}
-
-.form-heading .form-font {
-  font-size: 55px;
-  letter-spacing: 7px;
-  color: #ac066fde;
-  font-family: "Noto Sans", sans-serif;
-}
-
-.form-heading .form-line {
-  background: #ac066fde;
-  width: 80px;
-  height: 1px;
-  margin: 10px 0 5px 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 p {
@@ -29,54 +13,189 @@ p {
 
 textarea {
   border: none;
+  font-size: 20px;
+  color: #737373;
+  padding: 10px 0px 0px 10px;
+  font-family: "Noto Sans", sans-serif;
+  resize: horizontal;
+  max-width: 600px;
+  min-width: 200px;
 }
 
-.required-text {
-  color: #b3b3b3;
+@media screen and (max-width: 900px) {
+  .form-heading {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 25px;
+  }
+  .form-heading .form-font {
+    font-size: 20px;
+  }
+  .form-heading .form-line-overlay {
+    padding-left: 30%;
+  }
+  .container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .container .form-wrapper {
+    display: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: auto;
+    vertical-align: baseline;
+  }
+  .container .form-wrapper .form-inside {
+    display: initial;
+  }
+  textarea {
+    max-width: 250px;
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  #form-input-name,
+  #form-input-email {
+    font-size: 16px;
+  }
+  .button-overlay {
+    padding: 0px 0px 0px 10px;
+  }
+}
+
+@media screen and (max-width: 1475px) {
+  .container .form-wrapper {
+    display: initial;
+  }
+  #form-input-name,
+  #form-input-email {
+    width: 10%;
+  }
+}
+
+.form-heading {
+  padding: 7vh 0 0 15vh;
+}
+
+.form-heading .form-font {
+  font-size: 55px;
+  letter-spacing: 7px;
+  color: #ac066fde;
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.form-heading .form-line-overlay .form-line {
+  background: #ac066fde;
+  width: 80px;
+  height: 2px;
+  margin: 10px 0 5px 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  height: 100%;
   position: relative;
 }
 
-.required-text .required-star {
-  color: #ac066fde;
+.container .form-wrapper {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.form-wrapper {
+.container .form-wrapper .form-inside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5%;
 }
 
-.form-wrapper .form {
+.container .form-wrapper .form-inside .form {
   margin-right: 3%;
 }
 
-.line-overlay {
-  padding-right: 80px;
+.container .form-wrapper .form-inside .form .form-name-box {
+  padding-top: 0.5vh;
+  width: 50%;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row {
+  display: inline-block;
+  width: 150px;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row input {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row input:after {
+  background-color: #ac066fde;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row label {
+  color: #737373;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .form-wrapper .form-inside .form .form-email-box {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.container .form-wrapper .form-inside .form .form-email-box .form-email {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container .form-wrapper .form-inside .line-overlay {
+  padding-right: 100px;
   padding-left: 25px;
 }
 
-.line-overlay .line {
-  background: #cfc9cf;
-  height: 33vh;
-  width: 2px;
+.container .form-wrapper .form-inside .line-overlay .line {
+  background: #999999;
+  width: 1px;
+  height: 90%;
 }
 
 #form-input-name,
 #form-input-email {
-  width: 100%;
+  width: 215%;
   height: 70px;
   border: none;
+  font-size: 25px;
+  color: #737373;
+  padding-left: 15px;
 }
 
-#required {
-  color: #b3b3b3;
+.required {
+  color: #999999;
+  font-size: 15px;
+  padding-top: 7px;
+  padding-left: 25px;
 }
 
-.main {
-  padding: 15vh;
-  margin: 20px;
-  overflow: hidden;
-  height: 100%;
+.star-required {
+  color: #ac066fde;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  margin-top: 2px;
+  float: left;
 }
 
 .button-overlay {
@@ -95,46 +214,6 @@ textarea {
   -webkit-box-shadow: 3px 3px 3px #737373;
           box-shadow: 3px 3px 3px #737373;
   text-align: center;
-}
-
-@media screen and (max-width: 500px) {
-  .form-heading .form-font {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 1420px) {
-  .form-heading {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .main {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .form-wrapper {
-    display: initial;
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .line-overlay .line {
-    height: 2px;
-    width: 50vh;
-  }
-  .form-input {
-    width: 50%;
-    height: 70px;
-    border: none;
-  }
-  .button-overlay {
-    padding-left: 20px;
-    padding-top: 40px;
-    padding-right: 20px;
-  }
+  text-transform: uppercase;
+  cursor: pointer;
 }

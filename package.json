@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "job interview",
   "main": "index.js",
+  "homepage": "https://jpotocn.github.io/frnt-end/",
   "scripts": {
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,5 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jpotocn/frnt-end/issues"
-  },
-  "homepage": "https://github.com/jpotocn/frnt-end/"
+  }
 }

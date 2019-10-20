@@ -1,0 +1,77 @@
+@import 'config';
+
+@include mediaSm {
+  
+  .form-heading {
+   text-align: center;
+    align-items: center;
+    padding-left: 25px;
+    
+    .form-font {
+      font-size: 20px;
+    }
+
+    .form-line-overlay {
+      padding-left: 30%;
+    }
+  }
+
+  
+.container{
+    box-sizing: border-box;
+
+  .form-wrapper {
+    display: initial;
+    align-items: center;
+    margin-top: auto;
+    vertical-align: baseline;
+
+    .form-inside{
+      display:initial;
+    }
+  }
+}
+  
+
+textarea{
+  max-width: 250px;
+  font-size: 14px;
+  }
+
+p {
+  font-size: 12px;
+}
+
+  #form-input-name,
+  #form-input-email {
+    font-size: 16px;
+  }
+
+  .button-overlay {
+    padding: 0px 0px 0px 10px;
+  }
+}
+
+//Desktops & Laptops
+@include mediaMd {
+
+  .container{
+    .form-wrapper {
+      display: initial;
+    }
+  }
+  
+
+  #form-input-name,
+  #form-input-email {
+    width: 10%;
+  }
+}
+//Tablets & Small Laptops
+@include mediaLg {
+  
+}
+
+//Smartphones
+@include mediaXl {
+}
