@@ -1,36 +1,91 @@
-@import 'config';
+@import "config";
 
 @include mediaSm {
-
   .form-heading {
-     text-align: center;
-     align-items: center;
-     margin-right: 170px;
-     
+    text-align: center;
+    .form-font{
+      margin-right: 2rem;
+
+      h1{
+        font-size: xx-large;
+      }
+    }
   }
 
-  .container{
-    .form-wrapper{  
-      .form-inside{
+  .container {
+    
+    .form-wrapper {
+      .form-inside {
         flex-direction: column;
         align-items: center;
 
-
-
-        .form{
-          .form-sex{
-            .form-sex-radio{
-              .row{
-                .form-sex-text{
-                    
+        .form {
+          .form-sex {
+            .form-sex-radio {
+              display: inline-flex;
+              flex-direction: column;
+              .row-overlay {
+                margin-top:0.5rem;
+                .row {
+                  margin-top: 1.0rem;
+                  .form-sex-text {
+                    label {
+                      font-size: 14px;
+                    }
+                  }
                 }
               }
             }
           }
+
           
-            .button-overlay{
-            margin-bottom: 100px;
-            padding-left: 170px;
+        }
+        .form-email-box{
+          .button-overlay {
+            margin: auto;
+            width: 10%;
+            padding: 110px;
+          }
+        }
+
+      }
+    }
+  }
+
+  
+}
+
+
+//tablets and small laptops
+@include mediaMd {
+  .form-heading {
+    
+    .form-font{
+      text-align: justify;
+
+      h1{
+        font-size: xx-large;
+      }
+    }
+  }
+
+  .container {
+    
+    .form-wrapper {
+      .form-inside {
+       
+
+        .form {
+          .form-sex {
+            .form-sex-radio {
+             
+              .row-overlay {
+                
+                .row {
+
+                }
+              }
+            }
           }
         }
       }
@@ -38,61 +93,26 @@
   }
 
 
-  
+  textarea {
+    max-width: 400px;
+    height: 280px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+
+  .button-overlay {
+    padding-right: 50%;
+  }
 }
   
-
-//tablets and small laptops
-@include mediaMd {
-
- .container{
-     box-sizing: border-box;
-    
-   .form-wrapper {
-   
-    margin-top: auto;
-    
-     .form-inside{
-      
-
-       .form{
-
-        .form-name-box{
-          
-        }
-
-        .form-email-box{
-
-          
-        }
-
-       }
-     }
-   }
- }
-   
- 
- textarea{
-   max-width: 400px;
-   height: 280px;
-   font-size: 14px;
-   }
- 
- p {
-   font-size: 14px;
- }
-  
-   .button-overlay {
-     padding: 0px 0px 0px 10px;
-   }
-  }
-   
 
 //Tablets & Small Laptops
 @include mediaLg {
-  
 }
-
 
 @include mediaXl {
 }

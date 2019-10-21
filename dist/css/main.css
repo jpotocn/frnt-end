@@ -18,17 +18,19 @@ textarea {
   padding: 10px 0px 0px 10px;
   font-family: "Noto Sans", sans-serif;
   resize: horizontal;
-  max-width: 600px;
+  max-width: 1000px;
   min-width: 200px;
 }
 
 @media screen and (max-width: 1100px) {
   .form-heading {
     text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 170px;
+  }
+  .form-heading .form-font {
+    margin-right: 2rem;
+  }
+  .form-heading .form-font h1 {
+    font-size: xx-large;
   }
   .container .form-wrapper .form-inside {
     -webkit-box-orient: vertical;
@@ -39,19 +41,37 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
   }
-  .container .form-wrapper .form-inside .form .button-overlay {
-    margin-bottom: 100px;
-    padding-left: 170px;
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio .row-overlay {
+    margin-top: 0.5rem;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio .row-overlay .row {
+    margin-top: 1.0rem;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio .row-overlay .row .form-sex-text label {
+    font-size: 14px;
+  }
+  .container .form-wrapper .form-inside .form-email-box .button-overlay {
+    margin: auto;
+    width: 10%;
+    padding: 110px;
   }
 }
 
 @media screen and (max-width: 1410px) {
-  .container {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  .form-heading .form-font {
+    text-align: justify;
   }
-  .container .form-wrapper {
-    margin-top: auto;
+  .form-heading .form-font h1 {
+    font-size: xx-large;
   }
   textarea {
     max-width: 400px;
@@ -62,7 +82,7 @@ textarea {
     font-size: 14px;
   }
   .button-overlay {
-    padding: 0px 0px 0px 10px;
+    padding-right: 50%;
   }
 }
 
@@ -71,15 +91,15 @@ textarea {
 }
 
 .form-heading .form-font {
-  font-size: 3rem;
+  font-size: 1.5rem;
   letter-spacing: 7px;
-  color: #ac066fde;
+  color: #ad0670de;
   font-family: "Noto Sans", sans-serif;
   text-transform: uppercase;
 }
 
 .form-heading .form-line-overlay .form-line {
-  background: #ac066fde;
+  background: #ad0670de;
   width: 80px;
   height: 2px;
   margin: 10px 0 5px 0;
@@ -118,24 +138,89 @@ textarea {
   width: 50%;
 }
 
-.container .form-wrapper .form-inside .form .form-sex-radio .row {
-  display: inline-block;
-  width: 150px;
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 4rem;
+  margin-top: 1rem;
 }
 
-.container .form-wrapper .form-inside .form .form-sex-radio .row .radio {
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* input[type="radio"]{
+                
+                vertical-align: middle;
+                margin-top: -4px;
+                height: 25px;
+                width: 25px;           
+              } */
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio {
+  position: absolute;
+  margin-top: -4px;
+  top: 1;
+  left: 1;
   height: 25px;
   width: 25px;
+  background-color: white;
   border-radius: 50%;
+  border-color: #999999;
+  border-style: solid;
+  border-width: thin;
 }
 
-.container .form-wrapper .form-inside .form .form-sex-radio .row .form-sex-text {
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input:checked ~ .form-radio:after {
+  display: block;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio:hover {
+  opacity: 0.5;
+  -webkit-transition: all .9s ease;
+  transition: all .9s ease;
+  background: #e6e6e6;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio:after {
+  top: 6px;
+  left: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ad0670de;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input:checked ~ .form-radio {
+  background-color: #f5f5f5;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input:checked ~ .form-radio:after {
+  display: block;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-sex-text {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 60px;
 }
 
-.container .form-wrapper .form-inside .form .form-sex-radio .row .form-sex-text label {
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-sex-text label {
   color: #737373;
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
@@ -180,7 +265,7 @@ textarea {
 }
 
 .star-required {
-  color: #ac066fde;
+  color: #ad0670de;
   font-family: "Noto Sans", sans-serif;
   font-size: 19px;
   margin-top: 2px;
@@ -189,11 +274,11 @@ textarea {
 
 .button-overlay {
   padding-top: 25%;
-  padding-left: 76%;
+  padding-left: 165%;
 }
 
 .button-overlay .form-button {
-  background-color: #ac066fde;
+  background-color: #ad0670de;
   width: 155px;
   height: 55px;
   color: white;
