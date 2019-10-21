@@ -3,7 +3,6 @@ const email = document.getElementById('form-input-email');
 const textBox = document.getElementById('form-text-area');
 const form = document.getElementById('contact-form');
 const errorElement = document.getElementById('text-required');
-const radioButtons = document.getElementById('gender');
 
 // Defining a function to display error message
 
@@ -48,7 +47,7 @@ form.addEventListener('submit', (e) => {
             errorMessage("star-text-required", "*")
             e.preventDefault()
         }
-        alert("Name: " + name.value + "\n" + "E-mail: " + email.value + "\n" + "Message: " + textBox.value + "\n" + "Gender:" + radioButtons);
+        alert("Name: " + name.value + "\n" + "E-mail: " + email.value + "\n" + "Message: " + textBox.value + "\n" );
     })
 
 
