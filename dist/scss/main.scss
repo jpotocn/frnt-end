@@ -2,9 +2,10 @@
 @import "config";
 @import "mobile";
 
-$primary-color: #ac066fde;
+$primary-color: #ad0670de;
 $secondary-color: #737373;
 $third-color: #999999;
+$checkbox-color: #e6e6e6;
 $font-stack: "Noto Sans", sans-serif;
 
 //***HEADING STYLE***
@@ -12,7 +13,7 @@ $font-stack: "Noto Sans", sans-serif;
   padding: 7vh 0 0 15vh;
 
   .form-font {
-    font-size: 55px;
+    font-size: 1.5rem;
     letter-spacing: 7px;
     color: $primary-color;
     font-family: $font-stack;
@@ -37,67 +38,141 @@ $font-stack: "Noto Sans", sans-serif;
   margin-left: auto;
   overflow: hidden;
   height: 100%;
- 
+
   .form-wrapper {
     margin-right: auto;
     margin-left: auto;
-    
 
-   .form-inside{
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    
-    .form {
-      margin-right: 3%;
-      
-      .form-name-box {
-        padding-top: 0.5vh;
-        width: 50%;
-      }
+    .form-inside {
+      display: flex;
+      justify-content: center;
+      padding-top: 5%;
 
-      .form-sex-radio {      
-        .row {
-          display: inline-block;
-          width: 150px;
+      .form {
+        margin-right: 3%;
 
-        .radio{
-          cursor: pointer;
-          height: 25px;
-          width: 25px;
-          border-radius: 50%;
+        .form-name-box {
+          padding-top: 0.5vh;
+          width: 50%;
         }
 
-        label{
-          color:$secondary-color;
-          font-family: $font-stack;
-          font-size: 16px;
-          font-weight: bold;     
+        .form-sex-radio {
+          
+           .row-overlay{
+            display: inline-flex;
+            margin-right: 4rem;
+            margin-top: 1rem;
+
+            .row {
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+  
+              /* input[type="radio"]{
+                
+                vertical-align: middle;
+                margin-top: -4px;
+                height: 25px;
+                width: 25px;           
+              } */
+  
+              input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+              }
+  
+            
+              
+              .form-radio {
+                position: absolute;
+                margin-top: -4px;
+                top: 1;
+                left: 1;
+                height: 25px;
+                width: 25px;
+                background-color: white;
+                border-radius: 50%;
+                border-color: $third-color;
+                border-style: solid;
+                border-width: thin;
+
+                
+              }
+  
+              
+              .form-radio:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+  
+              input:checked ~ .form-radio:after {
+                display: block;
+              }
+
+              .form-radio:hover{
+                opacity: 0.5;
+                transition: all .9s ease;
+                background: $checkbox-color;
+              }
+  
+              .form-radio:after {
+                top: 6px;
+                left: 6px;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: $primary-color;
+              }
+  
+              input:checked ~ .form-radio {
+                background-color: #f5f5f5;
+              }
+  
+  
+              input:checked ~ .form-radio:after {
+                display: block;
+              }
+  
+              .form-sex-text {
+                display: inline-block;
+                padding-left: 60px;
+                label {
+                  color: $secondary-color;
+                  font-family: $font-stack;
+  
+                  font-size: 16px;
+                  font-weight: bold;
+                }
+              }
+            }
+           }
           
         }
+
+        .form-email-box {
+          margin-top: 10px;
+          width: 50%;
+
+          .form-email {
+            margin-bottom: 5px;
+          }
         }
       }
+      .line-overlay {
+        padding-right: 100px;
+        padding-left: 25px;
 
-      .form-email-box {
-        margin-top: 10px;
-        width:50%;
-
-        .form-email {
-          margin-bottom: 5px;
+        .line {
+          background: $third-color;
+          width: 1px;
+          height: 90%;
         }
       }
     }
-    .line-overlay {
-      padding-right: 100px;
-      padding-left: 25px;
-
-      .line {
-        background: $third-color;
-        width: 1px;
-        height: 90%;
-      }
-    }
-   }  
   }
 }
 
@@ -127,8 +202,8 @@ $font-stack: "Noto Sans", sans-serif;
 }
 
 .button-overlay {
-  padding-top: 35%;
-  padding-left: 153%;
+  padding-top: 25%;
+  padding-left: 165%;
 
   .form-button {
     background-color: $primary-color;
@@ -143,4 +218,6 @@ $font-stack: "Noto Sans", sans-serif;
     text-transform: uppercase;
     cursor: pointer;
   }
+
+  
 }

@@ -18,6 +18,11 @@ form.addEventListener('submit', (e) => {
         errorMessage("star-name-required","*")
         e.preventDefault()
     }else{
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name.value) === false) {
+            errorMessage("name-required", "Please, enter a valid name.");
+            errorMessage("star-name-required","*");
+        } 
         console.log("Name:" + name.value);
     }
 
@@ -27,7 +32,12 @@ form.addEventListener('submit', (e) => {
         errorMessage("star-email-required","*")      
         e.preventDefault()
     }else{
-        console.log("Email:" + email.value);
+        var regex = /^\S+@\S+\.\S+$/;                
+        if(regex.test(email.value) === false) {
+            errorMessage("email-required", "Please, enter a valid email.");
+            errorMessage("star-email-required","*");
+        } 
+        console.log("Name:" + email.value);
     }
 
     //textbox validation

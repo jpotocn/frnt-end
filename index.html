@@ -21,9 +21,9 @@
     <!--FORM HEADING.......-->
     <div class="form-heading">
         <div class="form-font">
-            schreiben sie<br>
-            uns eine<br>
-            nachricht
+            <h1>schreiben sie<br>
+                uns eine<br>
+                nachricht</h1>
         </div>
         <div class="form-line-overlay">
             <div class="form-line"></div>
@@ -39,7 +39,7 @@
                             <p>Ich interessiere mich für ...</p>
                         </div>
                         <div class="form-text-box">
-                            <textarea rows="12" cols="55" id="form-text-area"></textarea>
+                            <textarea rows="10" cols="55" id="form-text-area"></textarea>
                         </div>
 
                         <div class="star-required" id="star-text-required"></div>
@@ -53,52 +53,66 @@
                     <div class="form">
                         <div class="form-sex">
                             <div class="form-sex-label">
-                                <p>Anrede:<p>
+                                <p>Anrede<p>
                             </div>
                             <div class="form-sex-radio">
-                                <div class="row">
-                                    <input type="radio" name="gender" value="female" class="radio">
-                                    <label for="female">Frau</label>
-
+                                <div class="row-overlay">
+                                    <label class="row">
+                                        <input type="radio" name="gender" value="female" class="radio">
+                                        <span class="form-radio"></span>
+                                        <div class="form-sex-text">
+                                            <label for="">Frau</label>
+                                    </label>
                                 </div>
-                                <div class="row">
+                            </div>
+                            <div class="row-overlay">
+                                <label class="row">
                                     <input type="radio" name="gender" value="male" class="radio">
-                                    <label for="male">Herr</label>
+                                    <span class="form-radio"></span>
+                                    <div class="form-sex-text">
+                                        <label for="">Herr</label>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="row-overlay">
+                            <label class="row">
+                                <input type="radio" name="gender" value="other" class="radio">
+                                <span class="form-radio"></span>
+                                <div class="form-sex-text">
+                                    <label for="">Keine Angabe</label>
                                 </div>
-                                <div class="row">
-                                    <input type="radio" name="gender" value="other" class="radio">
-                                    <label for="other">Keine Angabe</label>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" form-name-box">
-                            <div class="form-name">
-                                <p>Ihr Name:</p>
-                            </div>
-                            <div class="textBox">
-                                <input type="text" name="form-name" id="form-input-name"><br>
-                                <div class="star-required" id="star-name-required"></div>
-                                <div class="required" id="name-required"></div>
-                            </div>
-                        </div>
-                        <div class="form-email-box">
-                            <div class="form-email">
-                                <p>Ihr E-Mail-Adresse:</p>
-                            </div>
-                            <div class="textBox">
-                                <input type="text" name="form-email" id="form-input-email"><br>
-                                <div class="star-required" id="star-email-required"></div>
-                                <div class="required" id="email-required"></div>
-                            </div>
-                            <div class="button-overlay">
-                                <input type="submit" class="form-button" value="send">
+                            </label>
                             </div>
                         </div>
                     </div>
+                    <div class=" form-name-box">
+                        <div class="form-name">
+                            <p>Ihr Name</p>
+                        </div>
+                        <div class="textBox">
+                            <input type="text" name="form-name" id="form-input-name"><br>
+                            <div class="star-required" id="star-name-required"></div>
+                            <div class="required" id="name-required"></div>
+                        </div>
+                    </div>
+                    <div class="form-email-box">
+                        <div class="form-email">
+                            <p>Ihr E-Mail-Adresse</p>
+                        </div>
+                        <div class="textBox">
+                            <input type="text" name="form-email" id="form-input-email"><br>
+                            <div class="star-required" id="star-email-required"></div>
+                            <div class="required" id="email-required"></div>
+                        </div>
+                        <div class="button-overlay">
+                                <input type="submit" class="form-button" value="send">
+                            </div>
+                    </div>
+                   
                 </div>
             </div>
-        </form>
+    </div>
+    </form>
     </div>
 </body>
 
