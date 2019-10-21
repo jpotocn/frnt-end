@@ -28,7 +28,7 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 25px;
+    margin-right: 170px;
   }
   .container .form-wrapper .form-inside {
     -webkit-box-orient: vertical;
@@ -38,6 +38,10 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .container .form-wrapper .form-inside .form .button-overlay {
+    margin-bottom: 100px;
+    padding-left: 170px;
   }
 }
 
@@ -67,7 +71,7 @@ textarea {
 }
 
 .form-heading .form-font {
-  font-size: 55px;
+  font-size: 3rem;
   letter-spacing: 7px;
   color: #ac066fde;
   font-family: "Noto Sans", sans-serif;
@@ -126,7 +130,12 @@ textarea {
   border-radius: 50%;
 }
 
-.container .form-wrapper .form-inside .form .form-sex-radio .row label {
+.container .form-wrapper .form-inside .form .form-sex-radio .row .form-sex-text {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row .form-sex-text label {
   color: #737373;
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
@@ -179,8 +188,8 @@ textarea {
 }
 
 .button-overlay {
-  padding-top: 35%;
-  padding-left: 153%;
+  padding-top: 25%;
+  padding-left: 76%;
 }
 
 .button-overlay .form-button {

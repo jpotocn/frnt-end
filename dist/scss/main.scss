@@ -12,7 +12,7 @@ $font-stack: "Noto Sans", sans-serif;
   padding: 7vh 0 0 15vh;
 
   .form-font {
-    font-size: 55px;
+    font-size: 3rem;
     letter-spacing: 7px;
     color: $primary-color;
     font-family: $font-stack;
@@ -37,67 +37,69 @@ $font-stack: "Noto Sans", sans-serif;
   margin-left: auto;
   overflow: hidden;
   height: 100%;
- 
+
   .form-wrapper {
     margin-right: auto;
     margin-left: auto;
-    
 
-   .form-inside{
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    
-    .form {
-      margin-right: 3%;
-      
-      .form-name-box {
-        padding-top: 0.5vh;
-        width: 50%;
+    .form-inside {
+      display: flex;
+      justify-content: center;
+      padding-top: 5%;
+
+      .form {
+        margin-right: 3%;
+
+        .form-name-box {
+          padding-top: 0.5vh;
+          width: 50%;
+        }
+
+        .form-sex-radio {
+          .row {
+            display: inline-block;
+            width: 150px;
+
+            .radio {
+              cursor: pointer;
+              height: 25px;
+              width: 25px;
+              border-radius: 50%;
+            }
+
+            .form-sex-text {
+              display: inline-block;
+              padding-left: 20px;
+              label {
+                color: $secondary-color;
+                font-family: $font-stack;
+                font-size: 16px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+
+        .form-email-box {
+          margin-top: 10px;
+          width: 50%;
+
+          .form-email {
+            margin-bottom: 5px;
+          }
+        }
       }
+      .line-overlay {
+        padding-right: 100px;
+        padding-left: 25px;
 
-      .form-sex-radio {      
-        .row {
-          display: inline-block;
-          width: 150px;
-
-        .radio{
-          cursor: pointer;
-          height: 25px;
-          width: 25px;
-          border-radius: 50%;
-        }
-
-        label{
-          color:$secondary-color;
-          font-family: $font-stack;
-          font-size: 16px;
-          font-weight: bold;     
-          
-        }
-        }
-      }
-
-      .form-email-box {
-        margin-top: 10px;
-        width:50%;
-
-        .form-email {
-          margin-bottom: 5px;
+        .line {
+          background: $third-color;
+          width: 1px;
+          height: 90%;
         }
       }
     }
-    .line-overlay {
-      padding-right: 100px;
-      padding-left: 25px;
-
-      .line {
-        background: $third-color;
-        width: 1px;
-        height: 90%;
-      }
-    }
-   }  
   }
 }
 
@@ -127,8 +129,8 @@ $font-stack: "Noto Sans", sans-serif;
 }
 
 .button-overlay {
-  padding-top: 35%;
-  padding-left: 153%;
+  padding-top: 25%;
+  padding-left: 76%;
 
   .form-button {
     background-color: $primary-color;

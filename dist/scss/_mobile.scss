@@ -3,24 +3,41 @@
 @include mediaSm {
 
   .form-heading {
-    text-align: center;
+     text-align: center;
      align-items: center;
-     padding-left: 25px;
-
-     .form-font{
-       
-     }
+     margin-right: 170px;
+     
   }
 
   .container{
-    .form-wrapper{
-      
+    .form-wrapper{  
       .form-inside{
         flex-direction: column;
         align-items: center;
+
+
+
+        .form{
+          .form-sex{
+            .form-sex-radio{
+              .row{
+                .form-sex-text{
+                    
+                }
+              }
+            }
+          }
+          
+            .button-overlay{
+            margin-bottom: 100px;
+            padding-left: 170px;
+          }
+        }
       }
     }
   }
+
+
   
 }
   
