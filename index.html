@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!--FORM HEADING.......-->
+    <div class="form-heading">
+        <div class="form-font">
+            <h1>schreiben sie<br>
+                uns eine<br>
+                nachricht</h1>
+        </div>
+        <div class="form-line-overlay">
+            <div class="form-line"></div>
+        </div>
+    </div>
+    <div class="container">
+        <form action="/" id="contact-form" method="GET">
+            <!--TEXT BOX......-->
+            <div class="form-wrapper">
+                <div class="form-inside">
+                    <div class="form">
+                        <div class="form-text-sm">
+                            <p>Ich interessiere mich für ...</p>
+                        </div>
+                        <div class="form-text-box">
+                            <textarea rows="10" cols="55" id="form-text-area"></textarea>
+                        </div>
+
+                        <div class="star-required" id="star-text-required"></div>
+
+                        <div class="required" id="text-required"></div>
+                    </div>
+                    <div class="line-overlay">
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="form">
+                        <div class="form-sex">
+                            <div class="form-sex-label">
+                                <p>Anrede<p>
+                            </div>
+                            <div class="form-sex-radio">
+                                <div class="row-overlay">
+                                    <label class="row">
+                                        <input type="radio" name="gender" value="female" class="radio">
+                                        <span class="form-radio"></span>
+                                        <div class="form-sex-text">
+                                            <label for="">Frau</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row-overlay">
+                                <label class="row">
+                                    <input type="radio" name="gender" value="male" class="radio">
+                                    <span class="form-radio"></span>
+                                    <div class="form-sex-text">
+                                        <label for="">Herr</label>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="row-overlay">
+                            <label class="row">
+                                <input type="radio" name="gender" value="other" class="radio">
+                                <span class="form-radio"></span>
+                                <div class="form-sex-text">
+                                    <label for="">Keine Angabe</label>
+                                </div>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" form-name-box">
+                        <div class="form-name">
+                            <p>Ihr Name</p>
+                        </div>
+                        <div class="textBox">
+                            <input type="text" name="form-name" id="form-input-name"><br>
+                            <div class="star-required" id="star-name-required"></div>
+                            <div class="required" id="name-required"></div>
+                        </div>
+                    </div>
+                    <div class="form-email-box">
+                        <div class="form-email">
+                            <p>Ihr E-Mail-Adresse</p>
+                        </div>
+                        <div class="textBox">
+                            <input type="text" name="form-email" id="form-input-email"><br>
+                            <div class="star-required" id="star-email-required"></div>
+                            <div class="required" id="email-required"></div>
+                        </div>
+                        <div class="button-overlay">
+                                <input type="submit" class="form-button" value="send">
+                            </div>
+                    </div>
+                   
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>

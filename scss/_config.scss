@@ -1,0 +1,29 @@
+$primary-color: #ac066fde;
+$secondary-color: #737373;
+$third-color: #999999;
+$font-stack: "Noto Sans", sans-serif;
+
+//MEDIA MIXINS
+@mixin mediaSm {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 1410px)  {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 1476px) and (max-width: 2200px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 2201px) {
+    @content;
+  }
+}

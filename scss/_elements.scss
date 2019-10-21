@@ -1,0 +1,25 @@
+@import 'config';
+
+body {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+p {
+    color: $secondary-color;
+    font-family: $font-stack;
+    font-weight: bold;
+  }
+  
+  textarea {
+    border: none;
+    font-size: 20px;
+    color: $secondary-color;
+    padding: 10px 0px 0px 10px;
+    font-family: $font-stack;
+    resize: horizontal;
+    max-width: 1000px;
+    min-width: 200px;
+  }

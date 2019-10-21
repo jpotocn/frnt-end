@@ -1,0 +1,293 @@
+body {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+p {
+  color: #737373;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+}
+
+textarea {
+  border: none;
+  font-size: 20px;
+  color: #737373;
+  padding: 10px 0px 0px 10px;
+  font-family: "Noto Sans", sans-serif;
+  resize: horizontal;
+  max-width: 1000px;
+  min-width: 200px;
+}
+
+@media screen and (max-width: 1100px) {
+  .form-heading {
+    text-align: center;
+  }
+  .form-heading .form-font {
+    margin-right: 2rem;
+  }
+  .form-heading .form-font h1 {
+    font-size: xx-large;
+  }
+  .container .form-wrapper .form-inside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio .row-overlay {
+    margin-top: 0.5rem;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio .row-overlay .row {
+    margin-top: 1.0rem;
+  }
+  .container .form-wrapper .form-inside .form .form-sex .form-sex-radio .row-overlay .row .form-sex-text label {
+    font-size: 14px;
+  }
+  .container .form-wrapper .form-inside .form-email-box .button-overlay {
+    margin: auto;
+    width: 10%;
+    padding: 110px;
+  }
+}
+
+@media screen and (max-width: 1410px) {
+  .form-heading .form-font {
+    text-align: justify;
+  }
+  .form-heading .form-font h1 {
+    font-size: xx-large;
+  }
+  textarea {
+    max-width: 400px;
+    height: 280px;
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .button-overlay {
+    padding-right: 50%;
+  }
+}
+
+.form-heading {
+  padding: 7vh 0 0 15vh;
+}
+
+.form-heading .form-font {
+  font-size: 1.5rem;
+  letter-spacing: 7px;
+  color: #ad0670de;
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.form-heading .form-line-overlay .form-line {
+  background: #ad0670de;
+  width: 80px;
+  height: 2px;
+  margin: 10px 0 5px 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  height: 100%;
+}
+
+.container .form-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container .form-wrapper .form-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5%;
+}
+
+.container .form-wrapper .form-inside .form {
+  margin-right: 3%;
+}
+
+.container .form-wrapper .form-inside .form .form-name-box {
+  padding-top: 0.5vh;
+  width: 50%;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* input[type="radio"]{
+                
+                vertical-align: middle;
+                margin-top: -4px;
+                height: 25px;
+                width: 25px;           
+              } */
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio {
+  position: absolute;
+  margin-top: -4px;
+  top: 1;
+  left: 1;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border-color: #999999;
+  border-style: solid;
+  border-width: thin;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input:checked ~ .form-radio:after {
+  display: block;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio:hover {
+  opacity: 0.5;
+  -webkit-transition: all .9s ease;
+  transition: all .9s ease;
+  background: #e6e6e6;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-radio:after {
+  top: 6px;
+  left: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ad0670de;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input:checked ~ .form-radio {
+  background-color: #f5f5f5;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row input:checked ~ .form-radio:after {
+  display: block;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-sex-text {
+  display: inline-block;
+  padding-left: 60px;
+}
+
+.container .form-wrapper .form-inside .form .form-sex-radio .row-overlay .row .form-sex-text label {
+  color: #737373;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .form-wrapper .form-inside .form .form-email-box {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.container .form-wrapper .form-inside .form .form-email-box .form-email {
+  margin-bottom: 5px;
+}
+
+.container .form-wrapper .form-inside .line-overlay {
+  padding-right: 100px;
+  padding-left: 25px;
+}
+
+.container .form-wrapper .form-inside .line-overlay .line {
+  background: #999999;
+  width: 1px;
+  height: 90%;
+}
+
+#form-input-name,
+#form-input-email {
+  width: 215%;
+  height: 70px;
+  border: none;
+  font-size: 25px;
+  color: #737373;
+  padding-left: 15px;
+}
+
+.required {
+  color: #999999;
+  font-size: 15px;
+  padding-top: 7px;
+  padding-left: 25px;
+}
+
+.star-required {
+  color: #ad0670de;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  margin-top: 2px;
+  float: left;
+}
+
+.button-overlay {
+  padding-top: 25%;
+  padding-left: 165%;
+}
+
+.button-overlay .form-button {
+  background-color: #ad0670de;
+  width: 155px;
+  height: 55px;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 3px;
+  border: none;
+  -webkit-box-shadow: 3px 3px 3px #737373;
+          box-shadow: 3px 3px 3px #737373;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
